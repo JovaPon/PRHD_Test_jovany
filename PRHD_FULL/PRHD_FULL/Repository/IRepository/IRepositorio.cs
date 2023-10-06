@@ -1,0 +1,12 @@
+﻿using System.Linq.Expressions;
+
+namespace PRHD_FULL.Repository.IRepository
+{
+    public interface IRepositorio<T> where T : class
+    {
+
+        Task<List<T>> ObtenerTodos(Expression<Func<T, bool>>? filtro = null, bool tracked = true);
+
+
+    }
+}
